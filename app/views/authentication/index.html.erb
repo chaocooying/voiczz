@@ -1,0 +1,28 @@
+	<div id="AuthHome">
+		<div class="intro" data-selector=".icon">
+			<div class="heading"><%= t "title.accounts" -%></div>
+			<div class="authenticate selector">
+<%=				render :partial=>"sns" -%>
+			</div>
+			<div class="clickable icon add"></div>
+		</div>
+		<ul class="accounts">
+<%- 
+		current_user.authentications.each do |account|
+			account.provider = "googleplus" if account.provider == "google_oauth2"
+-%>
+			<li class="sns">
+				<div class="icon <%=account.provider-%>" title="<%= t "sns.#{account.provider}" -%>"></div>
+<%- 			if account.pic -%>
+				<img src="<%=account.pic-%>" width="100" height="100"/>
+<%- 			end -%>
+				<div class="box">
+					<div class="heading"><%=account.name-%></div>
+					<small><%=account.nickname-%></small>
+				</div>
+			</li>
+<%-
+		end
+-%>
+		</ul>
+	</div>

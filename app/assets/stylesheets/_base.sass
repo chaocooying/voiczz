@@ -1,0 +1,122 @@
+*
+	margin:	0
+	padding: 0
+	border:	0
+	+box-sizing(border-box)
+	+user-select(none)
+html
+	height:	100%
+	vertical-align: baseline
+	outline: 0
+body
+	height:	100%
+	min:
+		width: 1000px
+	background: #000000 image-url('bg.jpg') no-repeat top center
+	color: $color-text
+	font:
+		family: arial,tahoma,sans-serif
+		size: 14px
+	line-height: 1.2
+	.cn
+		letter-spacing: 0.1em
+ol, ul
+	list-style: none
+a
+	color: #666666
+	text:
+		decoration: none
+small
+	font:
+		size: 11px
+	+opacity(0.5)
+p
+	margin-bottom: 20px
+button
+	display: inline-block
+	cursor:  hand
+	cursor:  pointer
+	padding: 10px 16px
+	border:  2px solid #ffffff
+	color: #ffffff
+	font:
+		size:   18px
+		weight: bold
+	text:
+		align: center
+	white-space: nowrap
+	background: $color-primary
+	+text-shadow(0 -1px 1px #999999)
+	+box-shadow(inset 0 0 2px #ffffff)
+	&:hover
+		background: $color-highlight
+		+text-shadow(none)
+input.field
+	width: 100%
+	padding: 10px
+	font:
+		color: $color-text
+		size: 18px
+
+// -----------------------------------------------------------------------------
+
+::selection
+	background: none
+	color: #ffffff
+	+text-shadow(none)
+.clickable
+	cursor: hand
+	cursor: pointer
+.selector
+	display: none
+.heading
+	color: $color-primary
+	font: $font-heading
+.box
+	background: $color-bg
+	+box-shadow(0 10px 20px rgba(0,0,0,0.9), inset 0 0 20px #ffffff)
+	fieldset
+		margin:
+			bottom: 100px
+	.heading
+		text:
+			transform: capitalize
+	.field
+		margin: 1px
+	button
+		position: absolute
+		bottom: 18px
+		right: 20px
+	&.googleplus
+		border:
+			color: #d44132
+.sns
+	.icon
+		display: block
+		width: 100px
+		height: 100px
+		background: image-url("ico.sns.png") no-repeat
+		&.facebook
+			background-position: 0 -100px
+		&.twitter
+			background-position: -100px -100px
+		&.googleplus
+			background-position: -200px -100px
+		&.tumblr
+			background-position: -300px -100px
+		&.linkedin
+			background-position: -400px -100px
+		&.flickr
+			background-position: 0 -200px
+		&.pinterest
+			background-position: -100px -200px
+		&.weibo
+			background-position: 0 -300px
+		&.douban
+			background-position: -100px -300px
+		&.qzone
+			background-position: -200px -300px
+		&.renren
+			background-position: -300px -300px	
+		&.kaixin
+			background-position: -400px -300px

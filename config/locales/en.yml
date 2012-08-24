@@ -1,0 +1,45 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  app:
+    title:  "%{name}'s voiczz"
+  menu:
+    feed: "Buzz"
+    rule: "Rules"
+    auth: "Channels"
+  btn:
+    signup: "Get started"
+    login:  "Login"
+  link:
+    account: "Account Settings"
+    logout:  "Sign Out"
+  title:
+    signup:   "Register"
+    accounts: "Your connected accounts"
+  msg:
+    authentication:
+        login: "You can also login via <em></em> ..."
+        empty: "<p>To synchronize your SNS, you need to connect your accounts with voiczz first.</p><p>Please choose a service to connect : <em></em></p>"
+        more:  "<p>To setup a synchronize rule you need to connect to at least 2 services</p><p>Please choose a service to connect : <em></em></p>"
+  user:
+    email:            "Email"
+    password:         "Password"
+    password_confirm: "Password once again"
+  sns:
+    facebook:   "Facebook"
+    twitter:    "Twitter"
+    googleplus: "Google+"
+    linkedin:   "LinkedIn"
+    tumblr:     "Tumblr"
+    flickr:     "Flickr"
+    pinterest:  "Pinterest"
+    weibo:      "微博"
+    douban:     "豆瓣"
+    qzone:      "QQ空間"
+    renren:     "人人網"
+    kaixin:     "開心網"
+  # logout: "You have successfully sign out :p"
+  # login:
+  #   new:  "Welcome %{user} ~!"
+  #   back: "Welcome back %{user} ~!"

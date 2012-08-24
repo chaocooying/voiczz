@@ -1,0 +1,104 @@
+.logo
+	position: absolute
+	top: 20px
+	left: 8%
+	width: 140px
+	height: 40px
+	background: image-url("ico.logo.png") no-repeat
+.menu
+	position: absolute
+	left: 25%
+	li
+		float: left
+		margin:
+			right: 4px
+		a
+			display: block
+			width: 80px
+			line:
+				height: 80px
+			background: #000
+			color: #ffffff
+			font: 
+				family: "Imprima", Verdana, Helvetica, sans-serif
+				weight: 400
+				size: 16px
+			text:
+				align: center
+			+text-shadow(0 -1px 1px #999999)
+			+opacity(0.3)
+			&.selected
+				height: 90px
+				background: $color-primary
+				+box-shadow(0 2px 6px rgba(0,0,0,0.3))
+				+opacity(1)
+			&:hover
+				background: $color-highlight
+				+box-shadow(0 2px 6px rgba(0,0,0,0.3))
+				+opacity(1)
+.user
+	position: absolute
+	right: 40px
+	line:
+		height: 32px
+	color: #ffffff
+	background: #000000
+	+box-shadow(0 2px 6px #000000)
+	small
+		padding:
+			left: 12px
+		font:
+			weight: bold
+		&.googleplus
+			color: #d44132
+	.email
+		display: inline-block
+		padding: 0 12px
+		border:
+			right: 1px solid #333333
+		color: #999999
+		font:
+			size: 12px
+		+text-shadow(1px 2px 1px #000000)
+	.icon
+		float: right
+		width: 32px
+		height: 32px
+		text:
+			align: center
+		&:hover
+			color: $color-primary
+		&.selected
+			background: $color-primary
+			color: #ffffff
+	.selector
+		border: 
+			top: 1px solid #333333
+		a
+			display: block
+			padding: 0 12px
+			border: 
+				bottom: 1px solid #333333
+			background: #222222
+			text:
+				align: right
+			&:hover
+				background: $color-primary
+				color: #ffffff
+.authenticate
+	.heading
+		margin: 20px 0
+		color: #ffffff
+		font:
+			size: 32px
+		em
+			color: $color-primary
+			font:
+				style: normal
+	.sns
+		a
+			float: left
+			margin: 0 4px 4px 0
+			+opacity(0.3)
+			&:hover
+				+opacity(1.0)

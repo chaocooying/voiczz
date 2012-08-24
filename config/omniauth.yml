@@ -1,0 +1,33 @@
+!map:HashWithIndifferentAccess
+# -----------------------------------------------------------------------------
+google:
+  url:    https://code.google.com/apis/console
+  key:    879675549951-jon9o6t2i3nfnmj3f026601ap373vj83.apps.googleusercontent.com
+  secret: Q5uxLC7-yZaBZrx4e2-MIgIf
+facebook:
+  url:    https://developers.facebook.com/apps
+  key:    407990565924499
+  secret: 91359f9a937f3fc9373593dfa082db2f
+twitter:
+  url:    https://dev.twitter.com/apps
+  key:    rhf4482OPKai9CWH6x4sA
+  secret: nnoJ1CIv7xtWBwWrLqAEFjBoMSlejXeHvSktXyAGkyU
+# -----------------------------------------------------------------------------
+weibo:
+  key:    1945204960
+  secret: 23f715046829198b7a13382fb6ad3ba5
+
+# Twitter:
+# 	config:
+# 		url:    http://api.twitter.com
+# 		token:
+# 			key:    56942549-FNONC4JeaZvX687zlYmah0RYbOcAiIfR62hUrAH6d
+# 			secret: ouMqbmE4c6V15lcIkf5jkjkeD0w0m91t9nhJdryMcg
+
+# GooglePlus:
+# 	id:  105965468356840991899
+# 	config:
+#     	id:        879675549951@developer.gserviceaccount.com
+# 		url:       https://www.googleapis.com/auth/plus.me
+# 		key:       google.plus.key
+# 		password:  notasecret

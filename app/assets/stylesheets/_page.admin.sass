@@ -1,0 +1,72 @@
+#AuthEmpty
+	margin: 0 20%
+	padding:
+		top: 150px
+	.heading
+		margin:
+			bottom: 40px
+		font:
+			size: 24px
+#AuthHome
+	margin: 0 5%
+	padding:
+		top: 150px
+	.intro
+		float: left
+		width: 20%
+		.heading
+			padding: 0 40px 40px 0
+			font:
+				size: 32px
+		.icon
+			&.add
+				width: 100px
+				height: 100px
+				margin:
+					top: 4px
+				background: image-url("ico.sns.png") no-repeat -300px 0
+				+opacity(0.3)
+				&:hover
+					+opacity(1.0)
+				&.selected
+					+opacity(1.0)
+		.selector
+			position: absolute
+			z-index: 100
+			width: 520px
+			background: #000000
+			margin:
+				left: 110px
+	.selector
+		background: #000000
+		padding:
+			top: 4px
+	li
+		float: right
+		width: 40%
+		padding: 0 0 40px 40px 
+		small
+			font:
+				weight: bold
+				size: 14px
+		img
+			position: absolute
+			margin:
+				top: 110px
+			padding: 1px
+			background: #FFFFFF
+			border: 1px solid #000000
+			+box-shadow(0 10px 20px rgba(0,0,0,0.9))
+		.icon
+			position: absolute
+			+box-shadow(0 10px 20px rgba(0,0,0,0.9))
+		.box
+			float: none
+			height: 210px
+			margin: 
+				left: 110px
+			padding: 20px
+		.heading
+			color: #000000
+			font:
+				size: 20px

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= t "app.title", :name=>"邢"-%></title>
+	<link href="http://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css' />
+	<%= stylesheet_link_tag :application %>
+	<%= javascript_include_tag :application %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="logo"></div>
+<%- if user_signed_in? -%>
+<%- current_user.provider = "googleplus" if current_user.provider=="google_oauth2" -%>
+	<div class="user" data-selector=".icon">
+		<a class="icon" href="#">x</a>
+		<small class="<%=current_user.provider-%>"><%= t "sns.#{current_user.provider}" -%></small>
+		<div class="email"><%= current_user.email -%></div>
+		<ul class="selector">
+			<li><%= link_to (t "link.account"), "#" -%></li>
+			<li><%= link_to (t "link.logout"), "/user/logout", :method=>:delete -%></li>
+		</ul>
+	</div>
+	<ul class="menu">
+		<li><a href="/home"<%=" class=selected" if request.fullpath=="/home"-%>><%= t "menu.feed" -%></a></li>
+		<li><a href="/rule"<%=" class=selected" if request.fullpath=="/rule"-%>><%= t "menu.rule" -%></a></li>
+		<li><a href="/auth"<%=" class=selected" if request.fullpath=="/auth"-%>><%= t "menu.auth" -%></a></li>
+	</ul>
+<%- end -%>
+<%= yield -%>
+</body>
+</html>

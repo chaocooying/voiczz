@@ -1,0 +1,18 @@
+	<div id="Intro">
+		<div class="box signup">
+			<div class="heading"><%= t "title.signup" -%></div>
+			<form>
+				<fieldset>
+					<input class="field" name="user[email]" placeholder="<%= t "user.email"-%>"/>
+					<input class="field" name="user[password]" placeholder="<%= t "user.password"-%>" type="password"/>
+					<input class="field" name="user[password_confirmation]" placeholder="<%= t "user.password_confirm"-%>" type="password"/>
+				</fieldset>
+				<button><%=t "btn.signup"-%> &raquo;</button>
+			</form>
+		</div>
+		<div class="authenticate" data-textholder=".icon,em">
+			<div class="heading"><%= raw t "msg.authentication.login" -%></div>
+<%= 		render :partial=>"authentication/sns" -%>
+		</div>
+	</div>
+<%# TODO: /user/login & /user/signup -%>
