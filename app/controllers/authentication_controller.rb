@@ -16,10 +16,6 @@ class AuthenticationController < ApplicationController
  		existing_users = Authentication.all :provider=>data[:provider], :uid=>data[:uid]
  		## CASE: user has logged in, we will check if he connects a new SNS service entity
 		if user_signed_in?
-			logger.debug "***** #{existing_users}"
-			logger.debug "***** #{!existing_users}"
-			logger.debug "***** #{existing_users.empty?}"
-			logger.debug "***** #{existing_users.size}"
 			current_user.authentications.create data if existing_users.empty?
 			redirect_to :action=>:index
  		## CASE: user has registered with this SNS service entity before
