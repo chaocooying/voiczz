@@ -4,6 +4,7 @@ google:
   url:    https://code.google.com/apis/console
   key:    879675549951-jon9o6t2i3nfnmj3f026601ap373vj83.apps.googleusercontent.com
   secret: Q5uxLC7-yZaBZrx4e2-MIgIf
+  scope:  https://www.googleapis.com/auth/plus.me
 facebook:
   url:    https://developers.facebook.com/apps
   key:    407990565924499

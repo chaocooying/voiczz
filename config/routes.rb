@@ -61,6 +61,7 @@ Voiczz::Application.routes.draw do
 	get "home" => "application#home"
 	devise_for :user, :path_names => { :sign_up=>"signup", :sign_in=>"login", :sign_out=>"logout" }
 	match "/auth/:provider/callback" => "authentication#create"
+	match "/auth/google/plus" => "authentication#connect", :service=>:googleplus
 	resources :authentication, :path=>:auth, :only=>:index
 	resources :rule, :only=>:index
 

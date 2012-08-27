@@ -7,10 +7,7 @@
 			<div class="clickable icon add"></div>
 		</div>
 		<ul class="accounts">
-<%- 
-		current_user.authentications.each do |account|
-			account.provider = "googleplus" if account.provider == "google_oauth2"
--%>
+<%-		current_user.authentications.each do |account| -%>
 			<li class="sns">
 				<div class="icon <%=account.provider-%>" title="<%= t "sns.#{account.provider}" -%>"></div>
 <%- 			if account.pic -%>
@@ -21,8 +18,6 @@
 					<small><%=account.nickname-%></small>
 				</div>
 			</li>
-<%-
-		end
--%>
+<%-		end -%>
 		</ul>
 	</div>

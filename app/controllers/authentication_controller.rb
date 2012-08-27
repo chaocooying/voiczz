@@ -11,8 +11,15 @@ class AuthenticationController < ApplicationController
 		end
 	end
 
+	def connect
+		case params[:service]
+			when :googleplus
+				redirect_to SNS::GooglePlus.auth_url
+		end
+	end
+
 	def create
-		data = Authentication.parse request.env["omniauth.auth"]
+		data = Authentication.parse request.env["omniauth.auth"], request.env["omniauth.origin"]
  		existing_users = Authentication.all :provider=>data[:provider], :uid=>data[:uid]
  		## CASE: user has logged in, we will check if he connects a new SNS service entity
 		if user_signed_in?

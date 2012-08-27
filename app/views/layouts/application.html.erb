@@ -11,7 +11,6 @@
 <body>
 	<div class="logo"></div>
 <%- if user_signed_in? -%>
-<%- current_user.provider = "googleplus" if current_user.provider=="google_oauth2" -%>
 	<div class="user" data-selector=".icon">
 		<a class="icon" href="#">x</a>
 		<small class="<%=current_user.provider-%>"><%= t "sns.#{current_user.provider}" -%></small>

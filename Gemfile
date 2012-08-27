@@ -29,6 +29,8 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-weibo-oauth2'
+gem 'google-api-client'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
