@@ -41,32 +41,36 @@
 		background: #000000
 		padding:
 			top: 4px
-	li
-		float: right
-		width: 40%
-		padding: 0 0 40px 40px 
-		small
-			font:
-				weight: bold
-				size: 14px
-		img
-			position: absolute
-			margin:
-				top: 110px
-			padding: 1px
-			background: #FFFFFF
-			border: 1px solid #000000
-			+box-shadow(0 10px 20px rgba(0,0,0,0.9))
-		.icon
-			position: absolute
-			+box-shadow(0 10px 20px rgba(0,0,0,0.9))
-		.box
-			float: none
-			height: 210px
-			margin: 
-				left: 110px
-			padding: 20px
-		.heading
-			color: #000000
-			font:
-				size: 20px
+	.accounts
+		li
+			float: left
+			width: 40%
+			padding: 0 0 40px 40px 
+			small
+				font:
+					weight: bold
+					size: 14px
+			img
+				position: absolute
+				margin:
+					top: 110px
+				padding: 1px
+				background: #FFFFFF
+				border: 1px solid #000000
+				+box-shadow(0 10px 20px rgba(0,0,0,0.9))
+			.icon
+				position: absolute
+				+box-shadow(0 10px 20px rgba(0,0,0,0.9))
+			.box
+				float: none
+				height: 210px
+				margin: 
+					left: 110px
+				padding: 20px
+			.heading
+				color: #000000
+				font:
+					size: 20px
+		&.single li
+			float: right
+

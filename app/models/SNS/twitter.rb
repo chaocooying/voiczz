@@ -3,7 +3,6 @@ class SNS::Twitter
 	public
 
 	def self.parse data
-		#TODO: 
 		return {
 			:provider    => data[:provider],
 			:uid         => data[:uid],
