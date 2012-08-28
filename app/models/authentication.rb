@@ -31,6 +31,7 @@ class Authentication
 		case omniauth[:provider]
 			when "googleplus" then return SNS::GooglePlus.parse omniauth
 			when "facebook"   then return SNS::Facebook.parse omniauth
+			when "twitter"    then return SNS::Twitter.parse omniauth
 			else 
 				puts "**** #{omniauth.to_yaml}"
 				xxxxxx
