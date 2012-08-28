@@ -14,6 +14,7 @@ class Authentication
 	field :pic,         :type => String
 	field :url,         :type => String
 	field :credentials, :type => Object
+	field :extra,       :type => Object
 
 	## Validations
 	validates :provider, :presence=>true
@@ -24,31 +25,16 @@ class Authentication
 
 	## Functions
 	def self.parse omniauth, extra = nil
-		data = { :provider=>omniauth[:provider], :uid=>omniauth[:uid] }
-		data[:email] = omniauth[:info][:email]
-		data[:name] = omniauth[:info][:name]
-		data[:nickname] = omniauth[:info][:nickname]
-		data[:pic] = omniauth[:info][:image]
-		data[:url] = omniauth[:extra][:raw_info][:link]
-		case data[:provider]
-			when "google_oauth2"
-	 			data[:credentials] = {
-	 				:access_token => omniauth[:credentials][:token],
-	 				:refresh_token => omniauth[:credentials][:refresh_token],
-	 				:expires_in=> omniauth[:credentials][:expires_at]
-	 			}
-			# when "facebook"
-			else
-puts "**** #{omniauth.to_yaml}"
-xxxxx
-	 			data[:credentials] = {
-	 				:access_token => omniauth[:credentials][:token],
-	 				:refresh_token => omniauth[:credentials][:refresh_token],
-	 				:expires_in=> omniauth[:credentials][:expires_at]
-	 			}
-	 	end
-	 	data[:provider] = extra if extra == "googleplus"
-		return data
+		case extra
+			when "googleplus" then omniauth[:provider] = "googleplus"
+		end
+		case omniauth[:provider]
+			when "googleplus" then return SNS::GooglePlus.parse omniauth
+			when "facebook"   then return SNS::Facebook.parse omniauth
+			else 
+				puts "**** #{omniauth.to_yaml}"
+				xxxxxx
+		end
 	end
 
 end

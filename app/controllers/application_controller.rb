@@ -8,12 +8,7 @@ class ApplicationController < ActionController::Base
 	def intro
 		redirect_to :home if user_signed_in?
 	end
-
 	def home
-		user = current_user.authentications.find_by :provider=>:googleplus
-logger.debug user.to_yaml
-		sns = SNS::GooglePlus.new user
-		sns.recent
 	end
 
 	private

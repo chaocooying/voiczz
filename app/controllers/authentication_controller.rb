@@ -10,14 +10,12 @@ class AuthenticationController < ApplicationController
 			render "authentication/empty"
 		end
 	end
-
 	def connect
 		case params[:service]
 			when :googleplus
 				redirect_to SNS::GooglePlus.auth_url
 		end
 	end
-
 	def create
 		data = Authentication.parse request.env["omniauth.auth"], request.env["omniauth.origin"]
  		existing_users = Authentication.all :provider=>data[:provider], :uid=>data[:uid]
@@ -29,14 +27,14 @@ class AuthenticationController < ApplicationController
 		elsif !existing_users.empty?
 			user = find_which existing_users
 			sign_in user
-			redirect_to :home, :notice => (t "login.back", :user=>data[:name])
+			redirect_to :home
  		## CASE: new registration
 		else
 			user = User.new :email=>data[:email], :provider=>data[:provider], :uid=>data[:uid], :pic=>data[:pic]
 			user.authentications.build data
 			user.save :validate=>false
 			sign_in user
-			redirect_to :home, :notice => (t "login.new", :user=>data[:name])
+			redirect_to :home
 		end
 	end
 
